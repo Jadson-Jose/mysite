@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static "css/base.css" %}">
+    <title>Site</title>
+</head>
+<body>
+    <ul class="menu">
+
+        <li>
+            <a class="{% if section == 'home' %} active {% endif %}"
+            href="{% url "home" %}">Home</a>
+        </li>
+
+        <li>
+            <a class="{% if section == 'blog_create' %} active {% endif %}" 
+            href="{% url "blog:create" %}">Add new post</a>
+        </li>
+
+    </ul>
+
+    {% block title %}{% endblock title %}
+
+    <p>
+        {% block content %}Some default content{% endblock content %}
+    </p>
+
+</body>
+</html>
