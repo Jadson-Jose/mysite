@@ -6,7 +6,7 @@
     <p>Posted {{ post.date|date:"M d, Y"}}</p>
     <p>Updated {{ post.updated }}</p>
     {% if post.author %}
-        <p>{{ post.author }}</p>
+        <p>Author {{ post.author }}</p>
     {% endif %}
         <p>{{ post.body }}</p>
 {% endblock content %}
